@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* Divs gerais */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header {
+    background-color: #353535;
+    padding: 10px 2%;
+}
+
+.logo-1 {
+    width: 170px;
+    height: 70px;
+    background-image: url('../images/logo.png');
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.logo-2 {
+    display: inline-block;
+    height: 70px;
+    padding: 15px;
+    background-color: #F9AD81;
+}
+
+@media screen and (max-width: 540px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .logo-1, .logo-2 {
+        margin-top: 10px;
+        align-self: center;
+    }
+
+    .logo-2 {
+        height: auto;
+        text-align: center;
+    }
+}
