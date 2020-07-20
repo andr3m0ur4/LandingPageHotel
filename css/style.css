@@ -42,8 +42,6 @@ header {
 
 section.cover-form {
     width: 100%;
-    padding: 0 2%;
-    height: 100%;
 }
 
 section .container {
@@ -51,7 +49,8 @@ section .container {
 }
 
 .bg {
-    height: 500px;
+    position: relative;
+    height: 560px;
     background-image: url('../images/hero-bg.jpg');
     background-size: cover;
     background-position: center;
@@ -59,13 +58,13 @@ section .container {
 
 .form-container {
     width: 400px;
-    height: 110%;
-    position: relative;
-    top: -5%;
+    height: 105%;
+    position: absolute;
+    top: -2.5%;
+    right: 30px;
     margin-right: 40px;
     box-shadow: 1px 1px 2px 1px rgb(180, 180, 180);
     background-color: white;
-    z-index: 2;
 }
 
 .form-container h2 {
@@ -90,7 +89,7 @@ section .container {
 }
 
 .form-container form {
-    margin-top: 8px;
+    margin-top: 20px;
     padding: 15px;
 }
 
@@ -128,8 +127,8 @@ section .container {
 }
 
 section.chamada {
-    position: relative;
-    top: -75px;
+    width: 100%;
+    margin-top: 40px;
     text-align: center;
     z-index: 1;
 }
@@ -146,19 +145,109 @@ section.chamada h2 {
     display: inline-block;
     color: #212529;
     font-size: 30px;
+    text-transform: uppercase;
     font-weight: normal;
 }
 
 section.chamada p {
     padding-top: 15px;
-    width: 96%;
+    width: 98%;
     max-width: 700px;
     display: inline-block;
     color: #212529;
     font-size: 20px;
 }
 
-@media screen and (max-width: 540px) {
+section.mosaico {
+    margin-top: 20px;
+}
+
+.flex-mosaico {
+    display: flex;
+}
+
+.flex-mosaico:nth-child(2), .flex-mosaico:nth-child(4) {
+    flex-direction: row-reverse;
+}
+
+.item-1-mosaico {
+    background-image: url('../images/room-1.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 60%;
+}
+
+.flex-mosaico:nth-child(2) .item-1-mosaico {
+    background-image: url('../images/room-2.jpg');
+}
+
+.flex-mosaico:nth-child(3) .item-1-mosaico {
+    background-image: url('../images/room-3.jpg');
+}
+
+.flex-mosaico:nth-child(4) .item-1-mosaico {
+    background-image: url('../images/room-4.jpg');
+}
+
+.item-2-mosaico {
+    width: 40%;
+    padding: 60px 40px;
+}
+
+.item-2-mosaico p {
+    color: #9d9d9d;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin-top: 8px;
+}
+
+footer img {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    width: 120px;
+    background-color: #F9AD81;
+}
+
+@media screen and (max-width: 960px) {
+    section .container {
+        height: auto;
+        padding: 40px 0;
+        justify-content: center;
+    }
+
+    .form-container {
+        width: 96%;
+        max-width: 400px;
+        height: auto;
+        position: static;
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .flex-mosaico {
+        flex-wrap: wrap;
+    }
+
+    .item-1-mosaico {
+        padding-top: 60%;
+        width: 100%;
+    }
+
+    .item-2-mosaico {
+        width: 100%;
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 640px) {
     .container {
         flex-direction: column;
         justify-content: center;
@@ -176,5 +265,7 @@ section.chamada p {
 
     .form-container {
         top: -2%;
+        margin: 0 2%;
+        align-self: center;
     }
 }
