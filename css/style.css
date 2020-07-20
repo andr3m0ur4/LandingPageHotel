@@ -12,7 +12,7 @@ html, body {
 /* Divs gerais */
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1024px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -36,8 +36,11 @@ header {
 .logo-2 {
     display: inline-block;
     height: 70px;
-    padding: 15px;
+    padding: 18px 38px;
     background-color: #F9AD81;
+    color: white;
+    font-weight: normal;
+    font-size: 0.7em;
 }
 
 section.cover-form {
@@ -131,6 +134,19 @@ section.chamada {
     margin-top: 40px;
     text-align: center;
     z-index: 1;
+    position: relative;
+}
+
+.icone-seta {
+    position: absolute;
+    left: 50%;
+    top: -72px;
+    transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    width: 64px;
+    height: 64px;
+    background-size: 100% 100%;
+    background-image: url('../images/arrow.png');
 }
 
 section.chamada .container {
@@ -199,26 +215,33 @@ section.mosaico {
 }
 
 footer {
+    background-color: #242424;
     text-align: center;
+    margin-top: 40px;
     padding: 20px 0;
 }
 
 footer p {
     margin-top: 8px;
+    color: #9d9d9d;
+}
+
+footer a {
+    color: #F9AD81;
+    text-decoration: none;
 }
 
 footer img {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    width: 120px;
-    background-color: #F9AD81;
+    width: 180px;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1024px) {
     section .container {
         height: auto;
-        padding: 40px 0;
+        padding: 60px 0;
         justify-content: center;
     }
 
@@ -244,6 +267,10 @@ footer img {
     .item-2-mosaico {
         width: 100%;
         text-align: justify;
+    }
+
+    footer {
+        margin-top: 0;
     }
 }
 
